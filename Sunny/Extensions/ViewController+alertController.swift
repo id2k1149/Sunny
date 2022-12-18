@@ -12,7 +12,9 @@ extension ViewController {
                                       message: String?,
                                       style: UIAlertController.Style,
                                       completionHandler: @escaping(String) -> Void) {
-        let ac = UIAlertController(title: title, message: message, preferredStyle: style)
+        let ac = UIAlertController(title: title,
+                                   message: message,
+                                   preferredStyle: style)
         ac.addTextField { tf in
             let cities = ["San Francisco", "Moscow", "New York", "Stambul", "Viena"]
             tf.placeholder = cities.randomElement()
@@ -27,7 +29,8 @@ extension ViewController {
 //                self.networkWeatherManager.fetchCurrentWeather(forCity: cityName)
                 
                 // option #2 add completionHandler to func
-                completionHandler(cityName)
+                let city = cityName.split(separator: " ").joined(separator: "%20")
+                completionHandler(city)
                 
             }
         }
