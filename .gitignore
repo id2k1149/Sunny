@@ -66,4 +66,4 @@ fastlane/screenshots
 fastlane/test_output
 
 
-supportingFiles/constants.swift
+SupportingFiles/Constants.swift
