@@ -56,15 +56,39 @@
 		50E5E318294F7E28003B4E93 /* Sunny */ = {
 			isa = PBXGroup;
 			children = (
-				50E5E319294F7E28003B4E93 /* AppDelegate.swift */,
-				50E5E31B294F7E28003B4E93 /* SceneDelegate.swift */,
-				50E5E31D294F7E28003B4E93 /* ViewController.swift */,
-				50E5E31F294F7E28003B4E93 /* Main.storyboard */,
-				50E5E322294F7E2A003B4E93 /* Assets.xcassets */,
-				50E5E324294F7E2A003B4E93 /* LaunchScreen.storyboard */,
-				50E5E327294F7E2A003B4E93 /* Info.plist */,
+				50E5E32F294F7F72003B4E93 /* View Controllers */,
+				50E5E32E294F7F5D003B4E93 /* Views */,
+				50E5E32D294F7F1B003B4E93 /* Supporting files */,
 			);
 			path = Sunny;
+			sourceTree = "<group>";
+		};
+		50E5E32D294F7F1B003B4E93 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				50E5E327294F7E2A003B4E93 /* Info.plist */,
+				50E5E322294F7E2A003B4E93 /* Assets.xcassets */,
+				50E5E319294F7E28003B4E93 /* AppDelegate.swift */,
+				50E5E31B294F7E28003B4E93 /* SceneDelegate.swift */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		50E5E32E294F7F5D003B4E93 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				50E5E31F294F7E28003B4E93 /* Main.storyboard */,
+				50E5E324294F7E2A003B4E93 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		50E5E32F294F7F72003B4E93 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				50E5E31D294F7E28003B4E93 /* ViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,7 +313,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PT982DDMHZ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Sunny/Info.plist;
+				INFOPLIST_FILE = "Sunny/Supporting files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -302,9 +326,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = MPol.Sunny;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,7 +344,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PT982DDMHZ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Sunny/Info.plist;
+				INFOPLIST_FILE = "Sunny/Supporting files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -330,9 +357,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = MPol.Sunny;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
