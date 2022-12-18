@@ -39,6 +39,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="tintColor" name="infoColor"/>
                                         <state key="normal" backgroundImage="magnifyingglass.circle.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="searchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bjF-NT-usk"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -108,6 +111,12 @@
                             <constraint firstItem="tbe-kB-8aG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="y8v-3l-PSR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="wKK-Xc-N9B" id="8jI-iZ-qI9"/>
+                        <outlet property="feelsLikeTemperatureLabel" destination="rrO-D9-1Ef" id="G4f-Lm-x46"/>
+                        <outlet property="temperatureLabel" destination="cx9-Is-XQw" id="XBL-jU-aEf"/>
+                        <outlet property="weatherIconImageView" destination="nxn-tJ-N49" id="2kD-Tn-jJq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
