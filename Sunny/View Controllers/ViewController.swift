@@ -23,7 +23,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func searchPressed(_ sender: UIButton) {
-        self.presentSearchAlertController(withTitle: "Enter city name", message: nil, style: .alert)
+        self.presentSearchAlertController(withTitle: "Enter city name",
+                                          message: nil,
+                                          style: .alert) {cityName in
+            self.networkWeatherManager.fetchCurrentWeather(forCity: cityName)
+        }
     }
 }
 
