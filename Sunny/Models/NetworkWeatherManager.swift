@@ -8,7 +8,8 @@
 import Foundation
 
 struct NetworkWeatherManager {
-    func fetchCurrentWeather(forCity city: String) {
+    func fetchCurrentWeather(forCity city: String,
+                            completionHandler: @escaping(CurrentWeather) -> Void) {
        
         let urlString = "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=\(apiKey)"
         guard let url = URL(string: urlString) else { return }
@@ -17,7 +18,9 @@ struct NetworkWeatherManager {
             if let data = data {
 //                let dataString = String(data: data, encoding: .utf8)
 //                print(dataString!)
-                let currentWeather = self.parseJSON(withData: data)
+                if let currentWeather = self.parseJSON(withData: data) {
+                    completionHandler(currentWeather)
+                }
             }
         }
         task.resume()
