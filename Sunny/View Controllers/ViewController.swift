@@ -37,6 +37,4 @@ extension ViewController: NetworkWeatherManagerDelegate {
                          with currentWeather: CurrentWeather) {
         print(currentWeather.cityName)
     }
-    
-    
 }
