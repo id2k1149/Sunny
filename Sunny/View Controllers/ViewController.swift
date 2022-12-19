@@ -33,16 +33,19 @@ class ViewController: UIViewController {
             self.updateInterfaceWith(weather: currentWeather)
         }
 //        networkWeatherManager.fetchCurrentWeather(forCity: "London")
+        
         if CLLocationManager.locationServicesEnabled() {
             locationManager.requestLocation()
         }
+         
+       
     }
 
     @IBAction func searchPressed(_ sender: UIButton) {
         self.presentSearchAlertController(withTitle: "Enter city name",
                                           message: nil,
                                           style: .alert) {[unowned self] city in
-            self.networkWeatherManager.fetchCurrentWeather(forCity: city) 
+            self.networkWeatherManager.fetchCurrentWeather(forRequestType: .cityName(city: city))
         }
     }
     
@@ -63,7 +66,7 @@ extension ViewController: CLLocationManagerDelegate {
         let latitude = location.coordinate.latitude
         let longitude = location.coordinate.longitude
         
-        networkWeatherManager.fetchCurrentWeather(forCity: "London")
+        networkWeatherManager.fetchCurrentWeather(forRequestType: .coordinate(latitude: latitude, longitude: longitude))
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
