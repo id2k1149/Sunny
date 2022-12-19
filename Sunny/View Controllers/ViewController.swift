@@ -32,7 +32,10 @@ class ViewController: UIViewController {
             guard let self = self else { return }
             self.updateInterfaceWith(weather: currentWeather)
         }
-        networkWeatherManager.fetchCurrentWeather(forCity: "London")
+//        networkWeatherManager.fetchCurrentWeather(forCity: "London")
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.requestLocation()
+        }
     }
 
     @IBAction func searchPressed(_ sender: UIButton) {
@@ -53,7 +56,18 @@ class ViewController: UIViewController {
     }
 }
 
+// MARK: - CLLocationManagerDelegate
 extension ViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last else { return }
+        let latitude = location.coordinate.latitude
+        let longitude = location.coordinate.longitude
+        
+        networkWeatherManager.fetchCurrentWeather(forCity: "London")
+    }
     
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error.localizedDescription)
+    }
 }
 
