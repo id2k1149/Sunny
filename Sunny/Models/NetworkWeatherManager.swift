@@ -7,8 +7,12 @@
 
 import Foundation
 
+protocol NetworkWeatherManagerDelegate {
+    func updateInterface(_: NetworkWeatherManager, with currentWeather: CurrentWeather)
+}
+
 struct NetworkWeatherManager {
-    var onCompletion: ((CurrentWeather) -> Void)?
+    var delegate: NetworkWeatherManagerDelegate?
     
     func fetchCurrentWeather(forCity city: String) {
         let urlString = "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=\(apiKey)"
@@ -19,7 +23,8 @@ struct NetworkWeatherManager {
 //                let dataString = String(data: data, encoding: .utf8)
 //                print(dataString!)
                 if let currentWeather = self.parseJSON(withData: data) {
-                    self.onCompletion?(currentWeather)
+                    self.delegate?.updateInterface(self,
+                                                   with: currentWeather)
                 }
             }
         }
@@ -28,7 +33,6 @@ struct NetworkWeatherManager {
     
     func parseJSON(withData data: Data) -> CurrentWeather? {
         let decoder = JSONDecoder()
-        
         do {
             let currentWeatherData = try decoder.decode(CurrentWeatherData.self,
                                                         from: data)
