@@ -18,6 +18,7 @@
 		50E5E33D294FA346003B4E93 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 50E5E33C294FA346003B4E93 /* .gitignore */; };
 		50E5E33F294FB04E003B4E93 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E5E33E294FB04E003B4E93 /* Constants.swift */; };
 		50E5E341294FB102003B4E93 /* CurrentWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E5E340294FB102003B4E93 /* CurrentWeatherData.swift */; };
+		50E5E343294FDF6C003B4E93 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E5E342294FDF6C003B4E93 /* CurrentWeather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		50E5E33C294FA346003B4E93 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		50E5E33E294FB04E003B4E93 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		50E5E340294FB102003B4E93 /* CurrentWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherData.swift; sourceTree = "<group>"; };
+		50E5E342294FDF6C003B4E93 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			children = (
 				50E5E338294FA12B003B4E93 /* NetworkWeatherManager.swift */,
 				50E5E340294FB102003B4E93 /* CurrentWeatherData.swift */,
+				50E5E342294FDF6C003B4E93 /* CurrentWeather.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			files = (
 				50E5E31E294F7E28003B4E93 /* ViewController.swift in Sources */,
 				50E5E334294F8B2B003B4E93 /* ViewController+alertController.swift in Sources */,
+				50E5E343294FDF6C003B4E93 /* CurrentWeather.swift in Sources */,
 				50E5E339294FA12B003B4E93 /* NetworkWeatherManager.swift in Sources */,
 				50E5E31A294F7E28003B4E93 /* AppDelegate.swift in Sources */,
 				50E5E31C294F7E28003B4E93 /* SceneDelegate.swift in Sources */,
